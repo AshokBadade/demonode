@@ -11,7 +11,7 @@
     ],
     "routes": [
       {
-        "src": "/data",
+        "src": "/products",
         "dest": "index.js"
       },
       {
