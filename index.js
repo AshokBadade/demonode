@@ -76,7 +76,7 @@ async function main() {
 
  //p1.save()
 
- app.get("/",cors(corsOptions),async(req,res) => {
+ app.get("/get",cors(corsOptions),async(req,res) => {
   try{
     const docs = await Products.find() ;
     res.json(docs);
