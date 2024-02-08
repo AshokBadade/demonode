@@ -76,7 +76,7 @@ async function main() {
 
  //p1.save()
 
- app.get("/products",cors(corsOptions),async(req,res) => {
+ app.get("/get",cors(corsOptions),async(req,res) => {
   try{
     const docs = await Products.find() ;
     res.json(docs);
@@ -88,7 +88,7 @@ async function main() {
 
 
 
- app.post("/data" ,(req,res) => {
+ app.post("/post" ,(req,res) => {
     const p = new Products(req.body) ;
     p.save() ;
     res.send("data added") ;
@@ -107,7 +107,7 @@ async function main() {
 //    console.log( "docs = "+docs) ;
 //  })
 
- app.put("/:id" , async(req,res) => {
+ app.put("/put/:id" , async(req,res) => {
   const id = req.params.id ;
   try{
     const docs = await Products.findOneAndUpdate({title:id}, req.body ,{new:true}) ;

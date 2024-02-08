@@ -11,15 +11,19 @@
     ],
     "routes": [
       {
-        "src": "/products",
+        "src": "/get",
         "dest": "index.js"
       },
       {
-        "src": "/data",
+        "src": "/post",
         "dest": "index.js"
       },
       {
-        "src": "/products/(.*)",
+        "src": "/del",
+        "dest": "index.js"
+      },
+      {
+        "src": "/put/(.*)",
         "dest": "index.js"
       },
       {
